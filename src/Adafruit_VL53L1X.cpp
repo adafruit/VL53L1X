@@ -249,13 +249,50 @@ uint16_t Adafruit_VL53L1X::getTimingBudget(void) {
   return 0;
 }
 
-/*
-
+/**************************************************************************/
+/*!
+    @brief  Set the inter measurement time.
+    @param ms Inter measurement time in milliseconds.
+    @returns True if successful, otherwise false.
+*/
+/**************************************************************************/
+bool Adafruit_VL53L1X::setInterMeasurement(uint16_t ms){
+  vl_status = VL53L1X_SetInterMeasurementInMs(ms);
+  return (vl_status == VL53L1X_ERROR_NONE);
 }
 
-boolean Adafruit_VL53L1X::SetDistanceMode(VL53L1_DistanceModes mode) {
-  Status = VL53L1_SetDistanceMode(pMyDevice, mode );
-  return (Status == VL53L1_ERROR_NONE);
+/**************************************************************************/
+/*!
+    @brief  Get the inter measurement time.
+    @returns inter measurement time in milliseconds.
+*/
+/**************************************************************************/
+uint16_t Adafruit_VL53L1X::getInterMeasurement(){
+  uint16_t ms = 0;
+
+  vl_status = VL53L1X_GetInterMeasurementInMs(&ms);
+  if (vl_status == VL53L1X_ERROR_NONE) {
+    return ms;
+  }
+  return 0;
+}
+
+/**************************************************************************/
+/*!
+    @brief  Set distance mode.
+    @param mode Operation mode
+                1 = short
+                2 = medium
+                X = long
+    @returns True if successful, otherwise false.
+*/
+/**************************************************************************/
+bool Adafruit_VL53L1X::setDistanceMode(uint16_t mode) {
+  vl_status = VL53L1X_SetDistanceMode(mode);
+  return (vl_status == VL53L1X_ERROR_NONE);
+}
+
+/*
 }
 
 boolean

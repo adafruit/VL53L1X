@@ -43,6 +43,10 @@ public:
   bool setTimingBudget(uint16_t ms);
   uint16_t getTimingBudget(void);
 
+  bool setInterMeasurement(uint16_t ms);
+  uint16_t getInterMeasurement(void);
+  bool setDistanceMode(uint16_t mode);
+
   bool dataReady(void);
   int16_t distance(void);
 
