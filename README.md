@@ -1,4 +1,4 @@
-# Adafruit VL53L1X Library [![Build Status](https://travis-ci.com/adafruit/Adafruit_VL53L1X.svg?branch=master)](https://travis-ci.com/adafruit/Adafruit_VL53L1X) [![Documentation](https://github.com/adafruit/ci-arduino/blob/master/assets/doxygen_badge.svg)](http://adafruit.github.io/Adafruit_VL53L1X/html/index.html)
+# Adafruit VL53L1X Library [![Build Status](https://github.com/adafruit/Adafruit_VL53L1X/workflows/Arduino%20Library%20CI/badge.svg)](https://github.com/adafruit/Adafruit_VL53L1X/actions) [![Documentation](https://github.com/adafruit/ci-arduino/blob/master/assets/doxygen_badge.svg)](http://adafruit.github.io/Adafruit_VL53L1X/html/index.html)
 
 <img src="https://cdn-shop.adafruit.com/970x728/3967-00.jpg" height="300"/>
 
